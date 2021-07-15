@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\GroceriesController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Grocery;
 
 /*
 |--------------------------------------------------------------------------

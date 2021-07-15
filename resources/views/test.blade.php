@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    
+   <!-- needs foreach -->
+    <p>{{ $grocery->name }}</p>
+
 </body>
 </html>

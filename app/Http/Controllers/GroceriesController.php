@@ -8,11 +8,14 @@ use App\Models\Grocery;
 class GroceriesController extends Controller
 {
     public function index(){
+
+        $groceries = Grocery::all();
+        return view('test', ['groceries' => $groceries]); 
     
-        foreach (Grocery::all() as $grocery){
-           echo "<p>{$grocery->name}</p>";
-           echo "<p>{$grocery->number}</p>";
-        }
+        // foreach (Grocery::all() as $grocery){
+        //    echo "<p>{$grocery->name}</p>";
+        //    echo "<p>{$grocery->number}</p>";
+        // }
       
 
     }
