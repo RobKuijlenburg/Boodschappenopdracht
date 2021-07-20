@@ -17,7 +17,7 @@
                 <a href="/">Home</a>
             </li>
             <li>
-                <a href="{{route('groceries.create')}}">Hello, There</a>
+                <a href="{{route('groceries.create')}}">Create</a>
             </li>
         </ul>
     </nav>
