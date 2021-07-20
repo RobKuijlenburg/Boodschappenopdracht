@@ -10,17 +10,14 @@ class GroceriesController extends Controller
     public function index(){
 
         $groceries = Grocery::all();
-        return view('test', ['groceries' => $groceries]); 
+        return view('groceries/index', ['grocery' => $groceries]); 
     
-        // foreach (Grocery::all() as $grocery){
-        //    echo "<p>{$grocery->name}</p>";
-        //    echo "<p>{$grocery->number}</p>";
-        // }
-      
-
     }
 
     public function create(){
+
+        $groceries = Grocery::all();
+        return view('groceries/create', ['grocery' => $groceries]); 
 
     }
 
@@ -28,7 +25,9 @@ class GroceriesController extends Controller
 
     }
 
-    public function edit(){
+    public function edit(Grocery $grocery){
+         
+        return view('groceries/edit', ['grocery' => $grocery]); 
 
     }
 

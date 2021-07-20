@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\GroceriesController;
 use Illuminate\Support\Facades\Route;
-use App\Models\Grocery;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -15,13 +15,6 @@ use App\Models\Grocery;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/test', function() {
-    return view('test');
-});
 
 Route::get('/groceries', [GroceriesController::class, 'index'])
     ->name('groceries.index');

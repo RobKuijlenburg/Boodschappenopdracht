@@ -1,0 +1,39 @@
+html {
+    font-family: sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    min-width: 80px;
+    border: 1px solid #888;
+    padding: 10px;
+}
+/* classes */
+.header {
+    color: #fff;
+    background-color: black;
+    text-align: left;
+}
+
+.productPrice {
+    text-align: right;
+}
+
+.productTotalCost {
+    text-align: right;
+}
+
+.productQuantity {
+    text-align: right;
+}
+
+.totalCost {
+    text-align: right;
+}
+
+.totaal {
+    text-align: right;
+}
