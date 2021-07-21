@@ -10,5 +10,6 @@ class Grocery extends Model
     use HasFactory;
   
     public $timestamps = false;
+    protected $fillable = ['name', 'number', 'price'];
 
 }
