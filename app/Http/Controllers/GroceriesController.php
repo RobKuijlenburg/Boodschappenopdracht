@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 // use Illuminate\Support\Facades\DB;
 use App\Models\Grocery;
+use Illuminate\Http\Request;
 
 class GroceriesController extends Controller
 {
@@ -21,11 +22,7 @@ class GroceriesController extends Controller
 
     public function store(){
  
-        Grocery::create(request()->validate([
-            'name' => 'required|min:2',
-            'number' => 'required|integer|gt:0',
-            'price' => 'required|numeric|gt:0'
-        ]));
+        Grocery::create($this->validateGrocery());
 
         return view('groceries/index', ['groceries' => Grocery::all()]);
     }
@@ -38,11 +35,7 @@ class GroceriesController extends Controller
 
     public function update(Grocery $grocery){
 
-        $grocery->update(request()->validate([
-            'name' => 'required|min:2',
-            'number' => 'required|integer|gt:0',
-            'price' => 'required|numeric|gt:0'
-        ]));
+        $grocery->update($this->validateGrocery());
 
         return view('groceries/index', ['groceries' => Grocery::all()]);
         
@@ -56,5 +49,14 @@ class GroceriesController extends Controller
         $groceries = Grocery::all();
         return view('groceries.index', ['groceries' => $groceries]); 
 
+    }
+
+    public function validateGrocery()
+    {
+        return request()->validate([
+            'name' => 'required|min:2',
+            'number' => 'required|integer|gt:0',
+            'price' => 'required|numeric|gt:0'
+        ]);
     }
 }
