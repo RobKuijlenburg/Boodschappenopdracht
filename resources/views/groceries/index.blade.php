@@ -30,9 +30,6 @@
         </tr>
     @endforeach
 
-    <tr>
-            <td class='totaal' colspan=3>Totaal</td>
-            <td class='totalCost'></td>
-    </tr>
+
 </table>
 @endsection
